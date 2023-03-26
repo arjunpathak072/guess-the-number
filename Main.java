@@ -12,5 +12,10 @@ public class Main {
         System.out.println("\nWelcome to the guessing game: \n");
         System.out.println("1 => Easy\n2 => Hard\n3 => Harder\n4 => Hardest");
 
+        do {
+            System.out.print("\nPlease enter your desired diffculty setting (1 through 4): ");
+            difficultyMode = sc.nextInt();
+        } while (difficultyMode > 4);
+
     }
 }
