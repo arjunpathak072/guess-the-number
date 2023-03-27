@@ -33,6 +33,37 @@ public class Main {
                 tries = 2;
                 break;
         }
+	System.out.println("You will get " + tries + " attempts to guess the number between 1 and 10");
+        int chosenNumber = ra.nextInt(10);
+
+        for (int i = tries; i > 0; i--) {
+
+            do {
+                System.out.print("\nEnter the number between 0 and 10: ");
+                choice = sc.nextInt();
+            } while (choice > 10);
+
+            if (choice == chosenNumber) {
+                System.out.println("Hurray! you guessed it right!");
+                break;
+            }
+
+            else if (i == 1) {
+                System.out.println("You are out of tries, the number was: " + chosenNumber);
+            }
+
+            else {
+                if (Math.abs(chosenNumber - choice) <= 2) {
+                    System.out.println("Oof! That was really close");
+                }
+
+                else {
+                    System.out.println("Tough luck! give that one more shot");
+                }
+                System.out.println("Tries remaining: " + (i - 1));
+            }
+
+        }
 
     }
 }
