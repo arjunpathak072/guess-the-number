@@ -16,6 +16,23 @@ public class Main {
             System.out.print("\nPlease enter your desired diffculty setting (1 through 4): ");
             difficultyMode = sc.nextInt();
         } while (difficultyMode > 4);
+        switch (difficultyMode) {
+            case 1:
+                tries = 5;
+                break;
+
+            case 2:
+                tries = 4;
+                break;
+
+            case 3:
+                tries = 3;
+                break;
+
+            case 4:
+                tries = 2;
+                break;
+        }
 
     }
 }
